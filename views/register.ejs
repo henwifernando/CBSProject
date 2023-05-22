@@ -93,7 +93,7 @@
             <% if(typeof errorMessage !== 'undefined' && errorMessage.length > 0) { %>
             <% if (errorMessage) { %>
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                  <li><%= errorMessage %></li>
+                  <li style="color: red;"><%= errorMessage %></li>
                 </div>
                 <% } %>
               <% } %>
@@ -101,7 +101,7 @@
               <% if(typeof errorMessages !== 'undefined' && errorMessages.length > 0) { %>
               <% errorMessages.forEach(function(error) { %>
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <li><%= error %></li>
+                        <li style="color: red;"><%= error %></li>
                   </div>
                   <% }) %>
               <% } %>
@@ -158,6 +158,7 @@
                             <div class="col-lg-7">
                               <select name="usertype" placeholder="Usertype"  class="form-control my-3 p-2" required>
                                 <option value="user">User</option>
+                                <option value="manager">Manager</option>
                                 <option value="admin">Admin</option>
                               </select>
                             </div>
